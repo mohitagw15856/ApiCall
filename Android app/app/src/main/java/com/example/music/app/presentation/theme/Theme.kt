@@ -21,7 +21,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun SongsAppTheme(darkTheme: Boolean = true, content: @Composable() () -> Unit) {
+fun SongsAppTheme(darkTheme: Boolean = true, content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {

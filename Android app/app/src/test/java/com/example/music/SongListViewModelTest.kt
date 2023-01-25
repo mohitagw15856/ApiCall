@@ -37,7 +37,7 @@ class SongListViewModelTest{
 
     @Before
     fun setup(){
-        useCase = mockk<GetSongsUseCase>()
+        useCase = mockk()
         var entry = Entry(
             Label("Happy Birthday"), emptyList(), Label("Happy Birthday"),
             Price("Happy Birthday", mockk()), mockk(), Label("Happy Birthday"), Label("Happy Birthday"),
@@ -132,7 +132,7 @@ class SongListViewModelTest{
 
         viewModel = SongListViewModel(useCase)
 
-    val arrayList: ArrayList<Entry> = ArrayList<Entry>()
+    val arrayList: ArrayList<Entry> = ArrayList()
 
     viewModel.getFilteredList("Happy", dummyList, arrayList)
     assertEquals(3, arrayList.size)

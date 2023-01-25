@@ -22,7 +22,7 @@ class SongListViewModel @Inject constructor(
 
     private val _state = mutableStateOf(SongListState())
     val state: State<SongListState> = _state
-    internal var originalSongsList = ArrayList<Entry>()
+    private var originalSongsList = ArrayList<Entry>()
 
     init {
         getSongs()
